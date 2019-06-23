@@ -52,7 +52,7 @@ $container = get_theme_mod( 'skycraft_container_type' );
 	</section>
 
 <div class="navbar-wrapper sticky-top">
-<nav class="navbar navbar-expand-md navbar-dark bg-stone">
+<nav class="navbar navbar-expand-md navbar-dark">
 
 <?php if ( 'container' == $container ) : ?>
 	<div class="container">

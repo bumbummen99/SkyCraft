@@ -17,7 +17,16 @@
 }
 
 $navbar-logo-vertical-offset: 2px;
-nav {
+nav.navbar {
+    background-color: #444444;
+    background: linear-gradient(rgba(255, 255, 255, 0.15) 0,#FFFFFF00 56px), url('../img/stone.jpg');
+    background-size: 126px;
+    image-rendering: crisp-edges;
+    
+    .navbar-toggler {
+        color: #FFFFFF;
+    }
+
     .custom-logo-link {
         padding: 0;
         margin-top: calc(-.5rem + #{$navbar-logo-vertical-offset});
