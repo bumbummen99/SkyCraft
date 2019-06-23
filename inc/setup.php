@@ -133,7 +133,7 @@ if ( ! function_exists( 'skycraft_all_excerpts_get_more_link' ) ) {
 	 */
 	function skycraft_all_excerpts_get_more_link( $post_excerpt ) {
 		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary skycraft-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
+			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-success skycraft-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
 			'skycraft' ) . '</a></p>';
 		}
 		return $post_excerpt;

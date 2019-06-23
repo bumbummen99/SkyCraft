@@ -63,7 +63,22 @@ if ( ! function_exists( 'skycraft_bootstrap_comment_form' ) ) {
 	    <label for="comment">' . _x( 'Comment', 'noun', 'skycraft' ) . ( ' <span class="required">*</span>' ) . '</label>
 	    <textarea class="form-control" id="comment" name="comment" aria-required="true" cols="45" rows="8"></textarea>
 	    </div>';
-		$args['class_submit']  = 'btn btn-secondary'; // since WP 4.1.
+		$args['class_submit']  = 'btn btn-success'; // since WP 4.1.
 		return $args;
 	}
 } // endif function_exists( 'skycraft_bootstrap_comment_form' )
+
+
+/**
+ * Adds bootstrap classes to the comment reply link.
+ *
+ * @param string $content Content of the link
+ *
+ * @return mixed
+ */
+function custom_comment_reply_link($content) {
+    $extra_classes = 'btn btn-success';
+    return preg_replace( '/comment-reply-link/', 'comment-reply-link ' . $extra_classes, $content);
+}
+
+add_filter('comment_reply_link', 'custom_comment_reply_link', 99);

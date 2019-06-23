@@ -122,7 +122,7 @@ section.not-found {
         .entry-footer,
         .page-header,
         .page-content {
-            padding: 15px;
+            padding: #{$grid-gutter-width / 2};
         }
 
         .entry-title,
@@ -141,7 +141,7 @@ section.not-found {
         background: url('../img/concrete.jpg');
         background-size: 126px;
         image-rendering: crisp-edges;
-        padding: 15px;
+        padding: #{$grid-gutter-width / 2};
 
         h3.widget-title {
             color: #FFF;
@@ -156,6 +156,69 @@ section.not-found {
                 a {
                     color: inherit;
                 }
+            }
+        }
+    }
+}
+
+div.comments-area {
+    background-color: #efefef;
+    background: url('../img/planks_oak.png');
+    background-size: 126px;
+    image-rendering: crisp-edges;
+    border: 1px solid #755e3a;
+    min-height: 192px;
+
+    .comments-area-inner {
+        padding: #{$grid-gutter-width / 2};
+        background: linear-gradient(23deg, #af8e58 42%,#af8e5800 100%);
+
+        ol {
+            padding: 0;
+            list-style-type: none;
+
+            li.comment {
+                position: relative;
+
+                article {
+                    background-color: $body-bg;
+                    padding: #{$grid-gutter-width / 4};
+
+                    @include media-breakpoint-up(sm) {
+                        margin-left: #{$comment-avatar-size + $comment-avatar-spacing * 2};
+                    }
+
+                    .comment-meta {
+                        .comment-author {
+                            .avatar {
+                                width: $comment-avatar-size;
+                                height: auto;
+
+                                @include media-breakpoint-up(sm) {
+                                    position: absolute;
+                                    top: $comment-avatar-spacing;
+                                    left: $comment-avatar-spacing;
+                                }
+                            }
+                        }
+                    }
+
+                    .reply {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        ol.children {
+            margin-left: #{$grid-gutter-width / 2};
+
+            @include media-breakpoint-up(sm) {
+                margin-left: #{$comment-avatar-size + $comment-avatar-spacing * 2};
+            }
+
+            li.comment {
+                margin-top: 1rem;
             }
         }
     }
@@ -234,6 +297,22 @@ input.field {
         span.middle {
             span {
                 background-color: #2d2d2d;
+            }
+        }
+    }
+
+    &.wood {
+        span.left {
+            background: url('../img/block-bottom-wood-left.png') top right no-repeat;
+        }
+    
+        span.right {
+            background: url('../img/block-bottom-wood-right.png') top right no-repeat;
+        }
+    
+        span.middle {
+            span {
+                background-color: #755e3a;
             }
         }
     }

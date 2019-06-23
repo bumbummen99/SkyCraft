@@ -92,8 +92,8 @@ if ( ! function_exists( 'skycraft_theme_customize_register' ) ) {
 		$wp_customize->add_control( 'skycraft_serversign_enabled', [
 			'type' => 'checkbox',
 			'section' => 'skycraft_theme_serversign_options', // Add a default or your own section
-			'label' => __( 'Enable Server Sign' ),
-			'description' => __( 'Enables the Server Sign functionality in the Header.' ),
+			'label' => __( 'Enable Server Sign', 'skycraft' ),
+			'description' => __( 'Enables the Server Sign functionality in the Header.', 'skycraft' ),
 		]);
 
 		// Server Sign Server Description
@@ -105,8 +105,8 @@ if ( ! function_exists( 'skycraft_theme_customize_register' ) ) {
 		$wp_customize->add_control( 'skycraft_serversign_description_enabled', [
 			'type' => 'checkbox',
 			'section' => 'skycraft_theme_serversign_options', // Add a default or your own section
-			'label' => __( 'ServerSign Description' ),
-			'description' => __( 'Enables the server description in the Server Sign.' ),
+			'label' => __( 'ServerSign Description', 'skycraft' ),
+			'description' => __( 'Enables the server description in the Server Sign.', 'skycraft' ),
 		]);
 
 		// Server Sign Server Icon
@@ -131,8 +131,8 @@ if ( ! function_exists( 'skycraft_theme_customize_register' ) ) {
 		$wp_customize->add_control( 'skycraft_serversign_players_enabled', [
 			'type' => 'checkbox',
 			'section' => 'skycraft_theme_serversign_options', // Add a default or your own section
-			'label' => __( 'ServerSign Players' ),
-			'description' => __( 'Enables the server players in the Server Sign.' ),
+			'label' => __( 'ServerSign Players', 'skycraft' ),
+			'description' => __( 'Enables the server players in the Server Sign.', 'skycraft' ),
 		]);
 
 		// Server Sign Version
@@ -144,8 +144,8 @@ if ( ! function_exists( 'skycraft_theme_customize_register' ) ) {
 		$wp_customize->add_control( 'skycraft_serversign_version_enabled', [
 			'type' => 'checkbox',
 			'section' => 'skycraft_theme_serversign_options', // Add a default or your own section
-			'label' => __( 'ServerSign Version' ),
-			'description' => __( 'Enables the server version in the Server Sign.' ),
+			'label' => __( 'ServerSign Version', 'skycraft' ),
+			'description' => __( 'Enables the server version in the Server Sign.', 'skycraft' ),
 		]);
 
 		// Server Sign address
@@ -158,8 +158,8 @@ if ( ! function_exists( 'skycraft_theme_customize_register' ) ) {
 		  $wp_customize->add_control( 'skycraft_serversign_address', array(
 			'type' => 'text',
 			'section' => 'skycraft_theme_serversign_options', // Add a default or your own section
-			'label' => __( 'ServerSign Address' ),
-			'description' => __( 'Defines the server address for the Server Sign.' ),
+			'label' => __( 'ServerSign Address', 'skycraft' ),
+			'description' => __( 'Defines the server address for the Server Sign.', 'skycraft' ),
 		));
 
 		// Server Sign Port
@@ -172,8 +172,8 @@ if ( ! function_exists( 'skycraft_theme_customize_register' ) ) {
 		  $wp_customize->add_control( 'skycraft_serversign_port', array(
 			'type' => 'text',
 			'section' => 'skycraft_theme_serversign_options', // Add a default or your own section
-			'label' => __( 'ServerSign Port' ),
-			'description' => __( 'Defines the server port for the Server Sign.' ),
+			'label' => __( 'ServerSign Port', 'skycraft' ),
+			'description' => __( 'Defines the server port for the Server Sign.', 'skycraft' ),
 		));
 
 		$wp_customize->add_setting(
