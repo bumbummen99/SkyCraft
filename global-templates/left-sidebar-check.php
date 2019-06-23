@@ -16,4 +16,4 @@ $sidebar_pos = get_theme_mod( 'skycraft_sidebar_position' );
 	<?php get_template_part( 'sidebar-templates/sidebar', 'left' ); ?>
 <?php endif; ?>
 
-<div class="col-md content-area" id="primary">
+<div class="col-md-8 content-area" id="primary">

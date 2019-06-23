@@ -136,6 +136,16 @@ section.not-found {
     }
 }
 
+.post.sticky {
+    background: url(../img/gold_block.png);
+    background-size: 126px;
+
+    .entry-inner,
+    .page-inner {
+        background: linear-gradient(23deg, #fffcc4 42%,#ffffff00 100%);
+    }
+}
+
 .widget {
     &:not(.widget_search) {
         background: url(../img/block-overlay.png), #383b3f;
