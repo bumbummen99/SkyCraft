@@ -138,7 +138,7 @@ section.not-found {
 
 .widget {
     &:not(.widget_search) {
-        background: url('../img/concrete.jpg');
+        background: url(../img/block-overlay.png), #383b3f;
         background-size: 126px;
         image-rendering: crisp-edges;
         padding: #{$grid-gutter-width / 2};
@@ -220,6 +220,10 @@ div.comments-area {
             li.comment {
                 margin-top: 1rem;
             }
+        }
+        
+        .comment-form {
+            font-weight: bold;
         }
     }
 }
