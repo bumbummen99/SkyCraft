@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: UnderStrap\n"
+"Project-Id-Version: skycraft\n"
 "POT-Creation-Date: 2018-02-08 16:42+0200\n"
 "PO-Revision-Date: 2018-02-11 17:19+0200\n"
 "Last-Translator: \n"
@@ -116,8 +116,8 @@ msgstr "ערכת עיצוב: %1$s מבוסס  %2$s."
 
 #. Theme URI of the plugin/theme
 #: footer.php:35
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
+msgid "http://skycraft.com"
+msgstr "http://skycraft.com"
 
 #. translators:
 #: footer.php:39
@@ -667,8 +667,8 @@ msgstr[0] "דירוג אורח"
 msgstr[1] "דירוג אורח"
 
 #. Theme Name of the plugin/theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "skycraft"
+msgstr "skycraft"
 
 #. Description of the plugin/theme
 msgid ""
@@ -678,7 +678,7 @@ msgid ""
 "support, built-in widget slider and much more you need for basic websites. "
 "IMPORTANT: All developer dependencies are not bundled with this install "
 "file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"copy-assets\" inside the extracted /skycraft folder."
 msgstr ""
 
 #. Author of the plugin/theme

@@ -1,7 +1,7 @@
 # Loco Gettext template
 msgid ""
 msgstr ""
-"Project-Id-Version: understrap\n"
+"Project-Id-Version: skycraft\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2016-12-20 18:30+0100\n"
 "PO-Revision-Date: 2018-03-02 09:44+0100\n"
@@ -756,8 +756,8 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "skycraft"
+msgstr "skycraft"
 
 #. Description of the theme
 msgid ""
@@ -767,7 +767,7 @@ msgid ""
 "support, built-in widget slider and much more you need for basic websites. "
 "IMPORTANT: All developer dependencies are not bundled with this install "
 "file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"copy-assets\" inside the extracted /skycraft folder."
 msgstr ""
 "Une combinaison du thème _s d'Automattic et de Bootstrap 4. Un excellent "
 "point de départ pour votre prochain projet de thème et de site Web de "
@@ -776,11 +776,11 @@ msgstr ""
 "vous avez besoin pour votre site. IMPORTANT: les dépendances des "
 "développeurs ne sont pas livrées avec ce fichier d'installation. Il suffit "
 "de télécharger le fichier .zip, de l'extraire et d'exécuter \"npm install\" "
-"et \"gulp copy-assets\" dans le dossier extract / understrap."
+"et \"gulp copy-assets\" dans le dossier extract / skycraft."
 
 #. Theme URI of the theme
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
+msgid "http://skycraft.com"
+msgstr "http://skycraft.com"
 
 #. Author of the theme
 msgid "Holger Koenemann"

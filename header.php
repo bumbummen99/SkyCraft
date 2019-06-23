@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'skycraft_container_type' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -76,7 +76,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				the_custom_logo();
 			} ?><!-- end custom logo -->
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'skycraft' ); ?>">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
@@ -90,7 +90,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				'fallback_cb'     => '',
 				'menu_id'         => 'main-menu',
 				'depth'           => 2,
-				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+				'walker'          => new skycraft_WP_Bootstrap_Navwalker(),
 			)
 		); ?>
 

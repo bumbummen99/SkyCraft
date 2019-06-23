@@ -1,8 +1,8 @@
 # Travis CI configuration file.
 # @link https://travis-ci.org/
 
-# For use with the UnderStrap WordPress theme
-# @link https://github.com/holger1411/understrap
+# For use with the skycraft WordPress theme
+# @link https://github.com/holger1411/skycraft
 
 # Declare project language and PHP versions to test against.
 # @link http://about.travis-ci.org/docs/user/languages/php/

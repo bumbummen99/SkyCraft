@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: understrap\n"
+"Project-Id-Version: skycraft\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2016-11-23 20:21+0200\n"
 "PO-Revision-Date: 2017-02-20 13:19+0000\n"
@@ -371,12 +371,12 @@ msgid "Save changes"
 msgstr "Spara ändringar"
 
 #. Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "skycraft"
+msgstr "skycraft"
 
 #. Theme URI of the theme
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
+msgid "http://skycraft.com"
+msgstr "http://skycraft.com"
 
 #. Description of the theme
 msgid ""

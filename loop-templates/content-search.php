@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<div class="entry-meta">
 
-					<?php understrap_posted_on(); ?>
+					<?php skycraft_posted_on(); ?>
 
 				</div><!-- .entry-meta -->
 
@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<footer class="entry-footer">
 
-			<?php understrap_entry_footer(); ?>
+			<?php skycraft_entry_footer(); ?>
 
 		</footer><!-- .entry-footer -->
 

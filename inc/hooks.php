@@ -29,17 +29,17 @@ if ( ! function_exists( 'skycraft_add_site_info' ) ) {
 
 		$site_info = sprintf(
 			'<a href="%1$s">%2$s</a><span class="sep"> | </span>%3$s',
-			esc_url( __( 'http://wordpress.org/', 'understrap' ) ),
+			esc_url( __( 'http://wordpress.org/', 'skycraft' ) ),
 			sprintf(
 				/* translators:*/
-				esc_html__( 'Proudly powered by %s', 'understrap' ),
+				esc_html__( 'Proudly powered by %s', 'skycraft' ),
 				'WordPress'
 			),
 			sprintf( // WPCS: XSS ok.
 				/* translators:*/
-				esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ),
+				esc_html__( 'Theme: %1$s by %2$s.', 'skycraft' ),
 				$the_theme->get( 'Name' ),
-				'<a href="' . esc_url( __( 'http://skyraptor.eu', 'understrap' ) ) . '">SkyRaptor</a>'
+				'<a href="' . esc_url( __( 'http://skyraptor.eu', 'skycraft' ) ) . '">SkyRaptor</a>'
 			)
 		);
 

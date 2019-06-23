@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: understrap\n"
+"Project-Id-Version: skycraft\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2017-01-06 07:53+0000\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
@@ -417,7 +417,7 @@ msgid ""
 "support, built-in widget slider and much more you need for basic websites. "
 "IMPORTANT: All developer dependencies are not bundled with this install "
 "file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"copy-assets\" inside the extracted /skycraft folder."
 msgstr ""
 "Eine Kombination aus  Automattic´s _s theme und Bootstrap 4. Konzipiert als "
 "solider Ausgangspunkt für dein nächstes Theme-Projekt und WordPress Website. "
@@ -426,7 +426,7 @@ msgstr ""
 "vieles mehr, was du für die Erstellung einer einfachen Website benötigst. "
 "WICHTIG: Alle Abhängigkeiten der Entwicklertools sind in diesem Paket nicht "
 "enthalten! Lade die ZIP-Datei herunter, entpacke sie und führe \"npm install"
-"\" sowie \"gulp copy-assets\" in der Konsole im entpackten UnderStrap-Ordner "
+"\" sowie \"gulp copy-assets\" in der Konsole im entpackten skycraft-Ordner "
 "aus."
 
 #: search.php:29
@@ -780,12 +780,12 @@ msgstr[0] "%s Kundenbewertung"
 msgstr[1] "%s Kunden Bewertungen"
 
 #. Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "skycraft"
+msgstr "skycraft"
 
 #. Theme URI of the theme
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
+msgid "http://skycraft.com"
+msgstr "http://skycraft.com"
 
 #. Author of the theme
 msgid "Holger Koenemann"

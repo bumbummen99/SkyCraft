@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( ! function_exists( 'understrap_pagination' ) ) {
+if ( ! function_exists( 'skycraft_pagination' ) ) {
 
-	function understrap_pagination( $args = array(), $class = 'pagination' ) {
+	function skycraft_pagination( $args = array(), $class = 'pagination' ) {
 
 		if ( $GLOBALS['wp_query']->max_num_pages <= 1 ) {
 			return;
@@ -22,9 +22,9 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 			array(
 				'mid_size'           => 2,
 				'prev_next'          => true,
-				'prev_text'          => __( '&laquo;', 'understrap' ),
-				'next_text'          => __( '&raquo;', 'understrap' ),
-				'screen_reader_text' => __( 'Posts navigation', 'understrap' ),
+				'prev_text'          => __( '&laquo;', 'skycraft' ),
+				'next_text'          => __( '&raquo;', 'skycraft' ),
+				'screen_reader_text' => __( 'Posts navigation', 'skycraft' ),
 				'type'               => 'array',
 				'current'            => max( 1, get_query_var( 'paged' ) ),
 			)

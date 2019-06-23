@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php
 			wp_link_pages(
 				array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'skycraft' ),
 					'after'  => '</div>',
 				)
 			);
@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<footer class="entry-footer">
 
-			<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'skycraft' ), '<span class="edit-link">', '</span>' ); ?>
 
 		</footer><!-- .entry-footer -->
 

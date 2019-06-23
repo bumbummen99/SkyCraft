@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: understrap\n"
+"Project-Id-Version: skycraft\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2016-12-20 05:10+0000\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
@@ -762,8 +762,8 @@ msgstr[1] "%s opinie klienta"
 msgstr[2] "%s opinii klienta"
 
 #. Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "skycraft"
+msgstr "skycraft"
 
 #. Description of the theme
 msgid ""
@@ -773,20 +773,20 @@ msgid ""
 "support, built-in widget slider and much more you need for basic websites. "
 "IMPORTANT: All developer dependencies are not bundled with this install file."
 " Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
-"assets\" inside the extracted /understrap folder."
+"assets\" inside the extracted /skycraft folder."
 msgstr ""
 "Połączenie motywu _s od Automattic oraz Bootstrapa 4. Stworzony jako solidna "
 "podstawa dla Twojego następnego motywu lub strony opartej na WordPressie. "
 "Wykorzystaj go jako motyw startowy lub motyw nadrzędny. Jak chcesz. "
 "Zawiera obsługę Font Awesome, wbudowany widżet slidera i wiele innych. "
 "WAŻNE: Zależności nie są dołączone do tego pliku instalacyjnego. Po prostu "
-"pobierz plik .zip, rozpakuj go, wejdź do katalogu /understrap i uruchom"
+"pobierz plik .zip, rozpakuj go, wejdź do katalogu /skycraft i uruchom"
 " polecenia "
 "\"npm install\" i \"gulp copy-assets\"."
 
 #. Theme URI of the theme
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
+msgid "http://skycraft.com"
+msgstr "http://skycraft.com"
 
 #. Author of the theme
 msgid "Holger Koenemann"
@@ -795,5 +795,3 @@ msgstr "Holger Koenemann"
 #. Author URI of the theme
 msgid "http://www.holgerkoenemann.de"
 msgstr "http://www.holgerkoenemann.de"
-
-

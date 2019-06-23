@@ -1,6 +1,6 @@
 <?php
 /**
- * Understrap Theme Customizer
+ * skycraft Theme Customizer
  *
  * @package skycraft
  */
@@ -14,35 +14,35 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-if ( ! function_exists( 'understrap_customize_register' ) ) {
+if ( ! function_exists( 'skycraft_customize_register' ) ) {
 	/**
 	 * Register basic customizer support.
 	 *
 	 * @param object $wp_customize Customizer reference.
 	 */
-	function understrap_customize_register( $wp_customize ) {
+	function skycraft_customize_register( $wp_customize ) {
 		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 	}
 }
-add_action( 'customize_register', 'understrap_customize_register' );
+add_action( 'customize_register', 'skycraft_customize_register' );
 
-if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
+if ( ! function_exists( 'skycraft_theme_customize_register' ) ) {
 	/**
 	 * Register individual settings through customizer's API.
 	 *
 	 * @param WP_Customize_Manager $wp_customize Customizer reference.
 	 */
-	function understrap_theme_customize_register( $wp_customize ) {
+	function skycraft_theme_customize_register( $wp_customize ) {
 
 		// Theme layout settings.
 		$wp_customize->add_section(
-			'understrap_theme_layout_options',
+			'skycraft_theme_layout_options',
 			array(
-				'title'       => __( 'Theme Layout Settings', 'understrap' ),
+				'title'       => __( 'Theme Layout Settings', 'skycraft' ),
 				'capability'  => 'edit_theme_options',
-				'description' => __( 'Container width and sidebar defaults', 'understrap' ),
+				'description' => __( 'Container width and sidebar defaults', 'skycraft' ),
 				'priority'    => 160,
 			)
 		);
@@ -51,9 +51,9 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		$wp_customize->add_section(
 			'skycraft_theme_serversign_options',
 			array(
-				'title'       => __( 'ServerSign Settings', 'understrap' ),
+				'title'       => __( 'ServerSign Settings', 'skycraft' ),
 				'capability'  => 'edit_theme_options',
-				'description' => __( 'Container width and sidebar defaults', 'understrap' ),
+				'description' => __( 'Container width and sidebar defaults', 'skycraft' ),
 				'priority'    => 160,
 			)
 		);
@@ -65,7 +65,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		 * @param WP_Customize_Setting $setting Setting instance.
 		 * @return string Sanitized slug if it is a valid choice; otherwise, the setting default.
 		 */
-		function understrap_theme_slug_sanitize_select( $input, $setting ) {
+		function skycraft_theme_slug_sanitize_select( $input, $setting ) {
 
 			// Ensure input is a slug (lowercase alphanumeric characters, dashes and underscores are allowed only).
 			$input = sanitize_key( $input );
@@ -177,11 +177,11 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		));
 
 		$wp_customize->add_setting(
-			'understrap_container_type',
+			'skycraft_container_type',
 			array(
 				'default'           => 'container',
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+				'sanitize_callback' => 'skycraft_theme_slug_sanitize_select',
 				'capability'        => 'edit_theme_options',
 			)
 		);
@@ -189,16 +189,16 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize,
-				'understrap_container_type',
+				'skycraft_container_type',
 				array(
-					'label'       => __( 'Container Width', 'understrap' ),
-					'description' => __( 'Choose between Bootstrap\'s container and container-fluid', 'understrap' ),
-					'section'     => 'understrap_theme_layout_options',
-					'settings'    => 'understrap_container_type',
+					'label'       => __( 'Container Width', 'skycraft' ),
+					'description' => __( 'Choose between Bootstrap\'s container and container-fluid', 'skycraft' ),
+					'section'     => 'skycraft_theme_layout_options',
+					'settings'    => 'skycraft_container_type',
 					'type'        => 'select',
 					'choices'     => array(
-						'container'       => __( 'Fixed width container', 'understrap' ),
-						'container-fluid' => __( 'Full width container', 'understrap' ),
+						'container'       => __( 'Fixed width container', 'skycraft' ),
+						'container-fluid' => __( 'Full width container', 'skycraft' ),
 					),
 					'priority'    => '10',
 				)
@@ -206,7 +206,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		);
 
 		$wp_customize->add_setting(
-			'understrap_sidebar_position',
+			'skycraft_sidebar_position',
 			array(
 				'default'           => 'right',
 				'type'              => 'theme_mod',
@@ -218,41 +218,41 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize,
-				'understrap_sidebar_position',
+				'skycraft_sidebar_position',
 				array(
-					'label'             => __( 'Sidebar Positioning', 'understrap' ),
+					'label'             => __( 'Sidebar Positioning', 'skycraft' ),
 					'description'       => __(
 						'Set sidebar\'s default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.',
-						'understrap'
+						'skycraft'
 					),
-					'section'           => 'understrap_theme_layout_options',
-					'settings'          => 'understrap_sidebar_position',
+					'section'           => 'skycraft_theme_layout_options',
+					'settings'          => 'skycraft_sidebar_position',
 					'type'              => 'select',
-					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+					'sanitize_callback' => 'skycraft_theme_slug_sanitize_select',
 					'choices'           => array(
-						'right' => __( 'Right sidebar', 'understrap' ),
-						'left'  => __( 'Left sidebar', 'understrap' ),
-						'both'  => __( 'Left & Right sidebars', 'understrap' ),
-						'none'  => __( 'No sidebar', 'understrap' ),
+						'right' => __( 'Right sidebar', 'skycraft' ),
+						'left'  => __( 'Left sidebar', 'skycraft' ),
+						'both'  => __( 'Left & Right sidebars', 'skycraft' ),
+						'none'  => __( 'No sidebar', 'skycraft' ),
 					),
 					'priority'          => '20',
 				)
 			)
 		);
 	}
-} // endif function_exists( 'understrap_theme_customize_register' ).
-add_action( 'customize_register', 'understrap_theme_customize_register' );
+} // endif function_exists( 'skycraft_theme_customize_register' ).
+add_action( 'customize_register', 'skycraft_theme_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-if ( ! function_exists( 'understrap_customize_preview_js' ) ) {
+if ( ! function_exists( 'skycraft_customize_preview_js' ) ) {
 	/**
 	 * Setup JS integration for live previewing.
 	 */
-	function understrap_customize_preview_js() {
+	function skycraft_customize_preview_js() {
 		wp_enqueue_script(
-			'understrap_customizer',
+			'skycraft_customizer',
 			get_template_directory_uri() . '/js/customizer.js',
 			array( 'customize-preview' ),
 			'20130508',
@@ -260,4 +260,4 @@ if ( ! function_exists( 'understrap_customize_preview_js' ) ) {
 		);
 	}
 }
-add_action( 'customize_preview_init', 'understrap_customize_preview_js' );
+add_action( 'customize_preview_init', 'skycraft_customize_preview_js' );

@@ -14,9 +14,9 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-add_action( 'after_setup_theme', 'understrap_setup' );
+add_action( 'after_setup_theme', 'skycraft_setup' );
 
-if ( ! function_exists ( 'understrap_setup' ) ) {
+if ( ! function_exists ( 'skycraft_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -24,14 +24,14 @@ if ( ! function_exists ( 'understrap_setup' ) ) {
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function understrap_setup() {
+	function skycraft_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on understrap, use a find and replace
-		 * to change 'understrap' to the name of your theme in all the template files
+		 * If you're building a theme based on skycraft, use a find and replace
+		 * to change 'skycraft' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'understrap', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'skycraft', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -46,7 +46,7 @@ if ( ! function_exists ( 'understrap_setup' ) ) {
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'understrap' ),
+			'primary' => __( 'Primary Menu', 'skycraft' ),
 		) );
 
 		/*
@@ -85,7 +85,7 @@ if ( ! function_exists ( 'understrap_setup' ) ) {
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'understrap_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'skycraft_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -97,15 +97,15 @@ if ( ! function_exists ( 'understrap_setup' ) ) {
 		add_theme_support( 'responsive-embeds' );
 
 		// Check and setup theme default settings.
-		understrap_setup_theme_default_settings();
+		skycraft_setup_theme_default_settings();
 
 	}
 }
 
 
-add_filter( 'excerpt_more', 'understrap_custom_excerpt_more' );
+add_filter( 'excerpt_more', 'skycraft_custom_excerpt_more' );
 
-if ( ! function_exists( 'understrap_custom_excerpt_more' ) ) {
+if ( ! function_exists( 'skycraft_custom_excerpt_more' ) ) {
 	/**
 	 * Removes the ... from the excerpt read more link
 	 *
@@ -113,7 +113,7 @@ if ( ! function_exists( 'understrap_custom_excerpt_more' ) ) {
 	 *
 	 * @return string
 	 */
-	function understrap_custom_excerpt_more( $more ) {
+	function skycraft_custom_excerpt_more( $more ) {
 		if ( ! is_admin() ) {
 			$more = '';
 		}
@@ -121,9 +121,9 @@ if ( ! function_exists( 'understrap_custom_excerpt_more' ) ) {
 	}
 }
 
-add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
+add_filter( 'wp_trim_excerpt', 'skycraft_all_excerpts_get_more_link' );
 
-if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
+if ( ! function_exists( 'skycraft_all_excerpts_get_more_link' ) ) {
 	/**
 	 * Adds a custom read more link to all excerpts, manually or automatically generated
 	 *
@@ -131,10 +131,10 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	 *
 	 * @return string
 	 */
-	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
+	function skycraft_all_excerpts_get_more_link( $post_excerpt ) {
 		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
-			'understrap' ) . '</a></p>';
+			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary skycraft-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
+			'skycraft' ) . '</a></p>';
 		}
 		return $post_excerpt;
 	}

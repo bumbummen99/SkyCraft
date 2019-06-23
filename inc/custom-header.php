@@ -9,15 +9,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-add_action( 'after_setup_theme', 'understrap_custom_header_setup' );
+add_action( 'after_setup_theme', 'skycraft_custom_header_setup' );
 
-if ( ! function_exists( 'understrap_custom_header_setup' ) ) {
-	function understrap_custom_header_setup() {
+if ( ! function_exists( 'skycraft_custom_header_setup' ) ) {
+	function skycraft_custom_header_setup() {
 
 		/**
-		 * Filter UnderStrap custom-header support arguments.
+		 * Filter skycraft custom-header support arguments.
 		 *
-		 * @since UnderStrap 0.5.2
+		 * @since skycraft 0.5.2
 		 *
 		 * @param array $args {
 		 *     An array of custom-header support arguments.
@@ -46,7 +46,7 @@ if ( ! function_exists( 'understrap_custom_header_setup' ) ) {
 				'default-image' => array(
 					'url'           => '%s/img/header.jpg',
 					'thumbnail_url' => '%s/img/header.jpg',
-					'description'   => __( 'Default Header Image', 'understrap' ),
+					'description'   => __( 'Default Header Image', 'skycraft' ),
 				),
 			)
 		);

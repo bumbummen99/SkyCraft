@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php if ( 'post' == get_post_type() ) : ?>
 
 				<div class="entry-meta">
-					<?php understrap_posted_on(); ?>
+					<?php skycraft_posted_on(); ?>
 				</div><!-- .entry-meta -->
 
 			<?php endif; ?>
@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php
 			wp_link_pages(
 				array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'skycraft' ),
 					'after'  => '</div>',
 				)
 			);
@@ -53,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<footer class="entry-footer">
 
-			<?php understrap_entry_footer(); ?>
+			<?php skycraft_entry_footer(); ?>
 
 		</footer><!-- .entry-footer -->
 

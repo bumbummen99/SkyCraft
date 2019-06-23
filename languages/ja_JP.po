@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: understrap\n"
+"Project-Id-Version: skycraft\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2016-12-20 05:10+0000\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
@@ -749,8 +749,8 @@ msgid_plural "%s customer reviews"
 msgstr[0] "%s 件のカスタマーレビュー"
 
 #. Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "skycraft"
+msgstr "skycraft"
 
 #. Description of the theme
 msgid ""
@@ -760,7 +760,7 @@ msgid ""
 "support, built-in widget slider and much more you need for basic websites. "
 "IMPORTANT: All developer dependencies are not bundled with this install "
 "file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"copy-assets\" inside the extracted /skycraft folder."
 msgstr ""
 "AutomatticのテーマとBootstrap 4のコンビネーション。あなたの次のテーマプロジェ"
 "クトとWordPressのウェブサイトの堅実な出発点として作られています。スターター"
@@ -768,12 +768,12 @@ msgstr ""
 "ポート、組み込みのウィジェットスライダーなど、基本的なWebサイトにはるかに必要"
 "なものが含まれています。 *重要*: すべての開発者の依存関係は、このインストール"
 "ファイルにバンドルされていません。zipファイルをダウンロードして展開し、展開さ"
-"れたunderstrapフォルダの中で「npm install」と「gulp copy-assets」を実行するだ"
+"れたskycraftフォルダの中で「npm install」と「gulp copy-assets」を実行するだ"
 "けです。"
 
 #. Theme URI of the theme
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
+msgid "http://skycraft.com"
+msgstr "http://skycraft.com"
 
 #. Author of the theme
 msgid "Holger Koenemann"

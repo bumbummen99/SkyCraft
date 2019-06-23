@@ -15,9 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @link https://developer.wordpress.org/reference/hooks/dynamic_sidebar_params/
  */
-add_filter( 'dynamic_sidebar_params', 'understrap_widget_classes' );
+add_filter( 'dynamic_sidebar_params', 'skycraft_widget_classes' );
 
-if ( ! function_exists( 'understrap_widget_classes' ) ) {
+if ( ! function_exists( 'skycraft_widget_classes' ) ) {
 	/**
 	 * Count number of visible widgets in a sidebar and add classes to widgets accordingly,
 	 * so widgets can be displayed one, two, three or four per row.
@@ -47,7 +47,7 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 	 * }
 	 * @return array $params
 	 */
-	function understrap_widget_classes( $params ) {
+	function skycraft_widget_classes( $params ) {
 
 		global $sidebars_widgets;
 
@@ -87,20 +87,20 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 		return $params;
 
 	}
-} // endif function_exists( 'understrap_widget_classes' ).
+} // endif function_exists( 'skycraft_widget_classes' ).
 
-add_action( 'widgets_init', 'understrap_widgets_init' );
+add_action( 'widgets_init', 'skycraft_widgets_init' );
 
-if ( ! function_exists( 'understrap_widgets_init' ) ) {
+if ( ! function_exists( 'skycraft_widgets_init' ) ) {
 	/**
 	 * Initializes themes widgets.
 	 */
-	function understrap_widgets_init() {
+	function skycraft_widgets_init() {
 		register_sidebar(
 			array(
-				'name'          => __( 'Right Sidebar', 'understrap' ),
+				'name'          => __( 'Right Sidebar', 'skycraft' ),
 				'id'            => 'right-sidebar',
-				'description'   => __( 'Right sidebar widget area', 'understrap' ),
+				'description'   => __( 'Right sidebar widget area', 'skycraft' ),
 				'before_widget' => '<div class="widget-parent mb-3 parent-%2$s"><aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside><div class="block-bottom stone"><span class="left"></span><span class="middle"><span></span></span><span class="right"></span></div></div>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -110,9 +110,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Left Sidebar', 'understrap' ),
+				'name'          => __( 'Left Sidebar', 'skycraft' ),
 				'id'            => 'left-sidebar',
-				'description'   => __( 'Left sidebar widget area', 'understrap' ),
+				'description'   => __( 'Left sidebar widget area', 'skycraft' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -121,4 +121,4 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		);
 
 	}
-} // endif function_exists( 'understrap_widgets_init' ).
+} // endif function_exists( 'skycraft_widgets_init' ).
