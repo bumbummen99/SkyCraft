@@ -80,6 +80,15 @@ if ( ! function_exists( 'skycraft_change_logo_class' ) ) {
 	}
 }
 
+add_filter('next_post_link', 'skycraft_post_link_attributes');
+add_filter('previous_post_link', 'skycraft_post_link_attributes');
+if ( ! function_exists ( 'skycraft_post_link_attributes' ) ) {
+	function skycraft_post_link_attributes($output) {
+		$code = 'class="btn btn-secondary"';
+		return str_replace('<a href=', '<a '.$code.' href=', $output);
+	}
+}
+
 /**
  * Display navigation to next/previous post when applicable.
  */
@@ -96,14 +105,18 @@ if ( ! function_exists ( 'skycraft_post_nav' ) ) {
 		?>
 		<nav class="container navigation post-navigation">
 			<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'skycraft' ); ?></h2>
-			<div class="row nav-links justify-content-between">
+			<div class="row nav-links justify-content-between mb-3">
 				<?php
+				echo '<span class="nav-previous">';
 				if ( get_previous_post_link() ) {
-					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'skycraft' ) );
+					previous_post_link( '%link', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'skycraft' ) );
 				}
+				echo '</span>';
+				echo '<span class="nav-next">';
 				if ( get_next_post_link() ) {
-					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'skycraft' ) );
+					next_post_link( '%link', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'skycraft' ) );
 				}
+				echo '</span>';
 				?>
 			</div><!-- .nav-links -->
 		</nav><!-- .navigation -->
@@ -177,7 +190,8 @@ if ( ! function_exists( 'skycraft_serversign' ) ) {
 			}
 
 			// Print Template
-			echo '<div class="server-sign mx-auto mb-2 mb-md-0 text-center">' . PHP_EOL;
+			echo '<div class="server-sign">' . PHP_EOL;
+			echo '<div class="server-sign-inner mx-auto mb-2 mb-md-0 text-center">' . PHP_EOL;
 			echo '<p class="mb-0">' . get_theme_mod('skycraft_serversign_address') . '</p>' . PHP_EOL;
 			echo '<img class="mx-auto d-block" src="' . get_template_directory_uri() . $statusImage . '" />' . PHP_EOL;
 			if ($status) {
@@ -193,6 +207,7 @@ if ( ! function_exists( 'skycraft_serversign' ) ) {
 				if (get_theme_mod('skycraft_serversign_players_enabled')) echo '<p class="mb-0">' . __('Spieler', 'skycraft') . ': ' . $data['players']['online'] . '/' . $data['players']['max'] . '</span>' . PHP_EOL;
 				if (get_theme_mod('skycraft_serversign_version_enabled')) echo '<p class="mb-0">' . __('Version', 'skycraft') . ': ' . $data['version']['name'] . '</span>' . PHP_EOL;
 			}
+			echo '</div>' . PHP_EOL;
 			echo '</div>' . PHP_EOL;
 		}
 	}

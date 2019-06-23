@@ -329,15 +329,33 @@ input.field {
 }
 
 .server-sign {
-    background-image: url('../img/planks_oak.png');
-    background-size: 126px;
-    image-rendering: crisp-edges;
-    max-width: 350px;
-    box-shadow: 0px 0px 10px 0px #000000;
-    border: 2px solid #000000;
-    padding: 7px;
-    font-size: 0.85rem;
-    font-family: 'Press Start 2P', cursive;
-    font-weight:bold;
-    color: #FFFFFF;
+    position: relative;
+    z-index: 10;
+
+    &:before {
+        content: '';
+        height: 100vh;
+        position: absolute;
+        width: 16px;
+        top: 0;
+        left: calc(50% - 8px);
+        background-image: url(../img/planks_oak.png);
+        background-size: 126px;
+        image-rendering: crisp-edges;
+        z-index: -1;
+    }
+
+    .server-sign-inner {
+        background-image: url('../img/planks_oak.png');
+        background-size: 126px;
+        image-rendering: crisp-edges;
+        max-width: 350px;
+        box-shadow: 0px 0px 10px 0px #000000;
+        border: 2px solid #000000;
+        padding: 7px;
+        font-size: 0.85rem;
+        font-family: 'Press Start 2P', cursive;
+        font-weight:bold;
+        color: #FFFFFF;
+    }
 }

@@ -26,7 +26,7 @@ $container = get_theme_mod( 'skycraft_container_type' );
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
-	<section class="hero" style="background-image: url(<?php echo header_image(); ?>)">
+	<section class="hero overflow-hidden" style="background-image: url(<?php echo header_image(); ?>)">
 
 		<?php if ( 'container' == $container ) : ?>
 		<div class="container">
