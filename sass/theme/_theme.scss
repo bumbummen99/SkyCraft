@@ -1,0 +1,251 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+@media (min-width: 601px) {
+    body.admin-bar {
+        .navbar-wrapper {
+            top: 46px;
+        }
+    }
+}
+
+@media (min-width: 783px) {
+    body.admin-bar {
+        .navbar-wrapper {
+            top: 32px;
+        }
+    }
+}
+
+$navbar-logo-vertical-offset: 2px;
+nav {
+    .custom-logo-link {
+        padding: 0;
+        margin-top: calc(-.5rem + #{$navbar-logo-vertical-offset});
+        margin-bottom: calc(-.5rem + #{$navbar-logo-vertical-offset});
+
+
+        img {
+            max-height: #{56px - $navbar-logo-vertical-offset * 2};
+            width: auto;
+        }
+    }
+
+    .navbar-nav .dropdown-menu {
+        background-color: transparent;
+        border: none;
+
+        @include media-breakpoint-up(sm) {
+            background-color: #444444;
+            background-image: url('../img/stone.jpg');
+            background-size: 126px;
+            image-rendering: crisp-edges;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: inherit;
+        }
+
+        li {
+
+            a {
+                color: $navbar-dark-color;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $navbar-dark-hover-color;
+                    background-color: inherit;
+                }
+            }
+
+            &.active {
+                a {
+                    color: $navbar-dark-active-color;
+                }
+            }
+        }
+    }
+}
+
+.bg-stone {
+    background-color: #444444;
+    background-image: url('../img/stone.jpg');
+    background-size: 126px;
+    image-rendering: crisp-edges;
+}
+
+section.hero {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+    .title {
+        color: #fff;
+        text-shadow: 0px 0px 3px rgba(0,0,0,0.75);
+        font-size: 3rem;
+
+        a {
+            color: inherit;
+            font-size: inherit;
+            font-weight: bold;
+        }
+    }
+}
+
+article.post,
+article.page,
+section.not-found {
+    background-color: #efefef;
+    background: url('../img/wool_colored_white.png');
+    background-size: 126px;
+    image-rendering: crisp-edges;
+    border: 1px solid #c2c2c2;
+    min-height: 192px;
+
+    .entry-inner,
+    .page-inner {
+        background: linear-gradient(23deg, #efefef 42%,#efefef00 100%);
+
+        .entry-header,
+        .entry-content,
+        .entry-footer,
+        .page-header,
+        .page-content {
+            padding: 15px;
+        }
+
+        .entry-title,
+        .page-title {
+            color: lighten(#000000, 5%);
+
+            a {
+                color: inherit;
+            }
+        }
+    }
+}
+
+.widget {
+    &:not(.widget_search) {
+        background: url('../img/concrete.jpg');
+        background-size: 126px;
+        image-rendering: crisp-edges;
+        padding: 15px;
+
+        h3.widget-title {
+            color: #FFF;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            color: darken(#FFFFFF, 15%);
+
+            li {
+                a {
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
+
+footer.page-footer {
+    background-color: #444444;
+    background: url('../img/stone.jpg');
+    background-size: 126px;
+    image-rendering: crisp-edges;
+    padding: 3rem 0;
+    color: darken(#FFFFFF, 20%);
+
+    a {
+        color: #FFF;
+    }
+}
+
+.btn {
+    background-image: url('../img/block-overlay.png');
+}
+
+input.field {
+    background: darken(#FFFFFF, 2%) url('../img/block-overlay-light.png');
+}
+
+.block-bottom {
+    display: block;
+    width: 100%;
+    height: 8px;
+    position: relative;
+    clear: both;
+
+    span.left,
+    span.right {
+        height: 8px;
+        width: 8px;
+        display: block;
+        position: absolute;
+    }
+
+    span.left {
+        top:0;
+        left:0;
+        background: url('../img/block-bottom-left.png') top right no-repeat;
+    }
+
+    span.right {
+        top:0;
+        right:0;
+        background: url('../img/block-bottom-right.png') top right no-repeat;
+    }
+
+    span.middle {
+        width: 100%;
+        padding: 0 7px;
+        height: 8px;
+        display: block;
+
+        span {
+            display: block;
+            background-color: #C2C2C2;
+            height: 8px;
+        }
+    }
+
+    &.stone {
+        span.left {
+            background: url('../img/block-bottom-stone-left.png') top right no-repeat;
+        }
+    
+        span.right {
+            background: url('../img/block-bottom-stone-right.png') top right no-repeat;
+        }
+    
+        span.middle {
+            span {
+                background-color: #2d2d2d;
+            }
+        }
+    }
+}
+
+.parent-widget_search {
+    .block-bottom {
+        display: none;
+    }
+}
+
+.server-sign {
+    background-image: url('../img/planks_oak.png');
+    background-size: 126px;
+    image-rendering: crisp-edges;
+    max-width: 350px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    border: 2px solid #000000;
+    padding: 7px;
+    font-size: 0.85rem;
+    font-family: 'Press Start 2P', cursive;
+    font-weight:bold;
+    color: #FFFFFF;
+}

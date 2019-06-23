@@ -1,0 +1,25 @@
+{
+    "name": "skyraptor/skycraft",
+    "description": "SkyCraft Wordpress Theme",
+    "homepage": "https://skyraptor.eu",
+    "keywords": ["wordpress","theme","bootstrap"],
+    "type": "wordpress-theme",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Patrick Henninger",
+            "email": "privat@skyraptor.eu",
+            "homepage": "https://skyraptor.eu/"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "composer/installers": "^1.5",
+        "xpaw/php-minecraft-query": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SkyRatpor\\SkyCraft\\": ["./"]
+        }
+    }
+}
