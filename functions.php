@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once("vendor/autoload.php");
 
 $skycraft_includes = array(
+	'/theme-update-checker.php',			// Initialize Theme updater
 	'/theme-settings.php',                  // Initialize theme default settings.
 	'/setup.php',                           // Theme setup and custom theme supports.
 	'/widgets.php',                         // Register widget area.
