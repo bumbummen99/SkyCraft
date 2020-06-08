@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/holger1411/skycraft.git"
+    "url": "https://github.com/bumbummen99/SkyCraft.git"
   },
   "keywords": [
     "wordpress",
@@ -23,36 +23,34 @@
   "author": "Holger Koenemann",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/holger1411/skycraft/issues"
+    "url": "https://github.com/bumbummen99/SkyCraft/issues"
   },
-  "homepage": "https://skycraft.com",
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "browser-sync": "^2.26.3",
-    "del": "^4.1.0",
+  "homepage": "https://skyraptor.eu",
+  "devDependencies": {
+    "bootstrap": "^4.5.0",
+    "browser-sync": "^2.26.7",
+    "del": "^4.1.1",
     "font-awesome": "^4.7.0",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-ignore": "^2.0.2",
-    "gulp-imagemin": "^5.0.3",
+    "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-rename": "^1.4.0",
+    "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-rimraf": "^0.2.2",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sequence": "^1.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp-watch": "^5.0.1",
+    "node-sass": "^4.14.1",
     "run-sequence": "^2.2.1",
     "undescores-for-npm": "^1.0.0",
-    "node-sass": "^4.12.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "autoprefixer": "^9.5.1",
+    "@babel/core": "^7.10.2",
+    "autoprefixer": "^9.8.0",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^8.0.0"
   }
