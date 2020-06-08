@@ -148,10 +148,61 @@ if ( ! function_exists( 'skycraft_mobile_web_app_meta' ) ) {
 }
 add_action( 'wp_head', 'skycraft_mobile_web_app_meta' );
 
-
+/* Server Query method */
 use xPaw\MinecraftPing;
 use xPaw\MinecraftPingException;
+if ( ! function_exists( 'skycraft_query_server' ) ) {
+	/**
+	 * Add mobile-web-app meta.
+	 */
+	function skycraft_query_server() {
+		if (get_theme_mod( 'skycraft_container_type' )) {
+			/* Initialize some variables */
+			$status = true;
+			$cacheKey = 'skycraft-query-data' . get_theme_mod('skycraft_serversign_address') . get_theme_mod('skycraft_serversign_port');
 
+			/* Query and Cache */
+			try
+			{
+				$query = new MinecraftPing( get_theme_mod('skycraft_serversign_address'), get_theme_mod('skycraft_serversign_port'), 2 );
+			}
+			catch( MinecraftPingException $e )
+			{
+				$status = false;
+			}
+			finally
+			{
+				if ($status) {
+					$data = $query->Query();
+
+					set_transient( $cacheKey, [
+						'status' => $status,
+						'result' => $data,
+					], '', 15 * 60 );
+
+					if( $query )
+					{
+						$query->Close();
+						}
+					}
+				}
+		}
+	}
+}
+
+/* Add CRON schedule entry and add server query callback to it */
+add_filter( 'cron_schedules', 'skycraft_add_cron_interval' );
+function skycraft_add_cron_interval( $schedules ) { 
+    $schedules['server_query'] = array(
+        'interval' => 60,
+        'display'  => esc_html__( 'Server Query (60 Seconds)' ), );
+    return $schedules;
+}
+
+add_action( 'skycraft_query_server', 'skycraft_query_server' );
+if ( ! wp_next_scheduled( 'skycraft_query_server' ) ) {
+    wp_schedule_event( time(), 'server_query', 'skycraft_query_server' );
+}
 
 if ( ! function_exists( 'skycraft_serversign' ) ) {
 	/**
@@ -159,35 +210,18 @@ if ( ! function_exists( 'skycraft_serversign' ) ) {
 	 */
 	function skycraft_serversign() {
 		if (get_theme_mod( 'skycraft_container_type' )) {
-			// Query Server
-			$status = true;
-			$statusImage = '/img/online.png';
 			$cacheKey = 'skycraft-query-data' . get_theme_mod('skycraft_serversign_address') . get_theme_mod('skycraft_serversign_port');
-			wp_cache_delete( $cacheKey, '' );
-			$data = wp_cache_get($cacheKey, '');
-			if (!$data) {
-				try
-				{
-					$query = new MinecraftPing( get_theme_mod('skycraft_serversign_address'), get_theme_mod('skycraft_serversign_port'), 2 );
-				}
-				catch( MinecraftPingException $e )
-				{
-					//echo $e->getMessage();
-					$status = false;
-					$statusImage = '/img/offline.png';
-				}
-				finally
-				{
-					if ($status) {
-						$data = $query->Query();
-						wp_cache_set($cacheKey, $data, '', 1 * 1);
-						if( $query )
-						{
-							$query->Close();
-						}
-					}
-				}
+			$cache = get_transient($cacheKey);
+
+			if (is_array($cache)) {
+				$status = $cache['status'];
+				$data = $cache['result'];
+			} else {
+				$status = false;
+				$data = [];
 			}
+			$statusImage = $status ? '/img/online.png' : '/img/offline.png';
+			
 
 			// Print Template
 			echo '<div class="server-sign">' . PHP_EOL;
@@ -209,6 +243,11 @@ if ( ! function_exists( 'skycraft_serversign' ) ) {
 			}
 			echo '</div>' . PHP_EOL;
 			echo '</div>' . PHP_EOL;
+
+			wp_cache_set( 'server-status', [
+				'status' => $status,
+				'result' => $data,
+			], '', 15 * 60 );
 		}
 	}
 }
