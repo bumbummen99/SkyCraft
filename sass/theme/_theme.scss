@@ -21,7 +21,7 @@ nav.navbar {
     background-color: #444444;
     background: linear-gradient(rgba(255, 255, 255, 0.15) 0,#FFFFFF00 56px), url('../img/stone.jpg');
     background-size: 126px;
-    image-rendering: crisp-edges;
+    image-rendering: pixelated;
     
     .navbar-toggler {
         color: #FFFFFF;
@@ -47,7 +47,7 @@ nav.navbar {
             background-color: #444444;
             background-image: url('../img/stone.jpg');
             background-size: 126px;
-            image-rendering: crisp-edges;
+            image-rendering: pixelated;
         }
 
         &:hover,
@@ -82,7 +82,7 @@ nav.navbar {
     background-color: #444444;
     background-image: url('../img/stone.jpg');
     background-size: 126px;
-    image-rendering: crisp-edges;
+    image-rendering: pixelated;
 }
 
 section.hero {
@@ -109,7 +109,7 @@ section.not-found {
     background-color: #efefef;
     background: url('../img/wool_colored_white.png');
     background-size: 126px;
-    image-rendering: crisp-edges;
+    image-rendering: pixelated;
     border: 1px solid #c2c2c2;
     min-height: 192px;
 
@@ -150,7 +150,7 @@ section.not-found {
     &:not(.widget_search) {
         background: url(../img/block-overlay.png), #383b3f;
         background-size: 126px;
-        image-rendering: crisp-edges;
+        image-rendering: pixelated;
         padding: #{$grid-gutter-width / 2};
 
         h3.widget-title {
@@ -168,6 +168,10 @@ section.not-found {
                 }
             }
         }
+
+        p {
+            color: darken(#FFFFFF, 15%);
+        }
     }
 }
 
@@ -175,7 +179,7 @@ div.comments-area {
     background-color: #efefef;
     background: url('../img/planks_oak.png');
     background-size: 126px;
-    image-rendering: crisp-edges;
+    image-rendering: pixelated;
     border: 1px solid #755e3a;
     min-height: 192px;
 
@@ -242,7 +246,7 @@ footer.page-footer {
     background-color: #444444;
     background: url('../img/stone.jpg');
     background-size: 126px;
-    image-rendering: crisp-edges;
+    image-rendering: pixelated;
     padding: 3rem 0;
     color: darken(#FFFFFF, 20%);
 
@@ -351,14 +355,14 @@ input.field {
         left: calc(50% - 8px);
         background-image: url(../img/planks_oak.png);
         background-size: 126px;
-        image-rendering: crisp-edges;
+        image-rendering: pixelated;
         z-index: -1;
     }
 
     .server-sign-inner {
         background-image: url('../img/planks_oak.png');
         background-size: 126px;
-        image-rendering: crisp-edges;
+        image-rendering: pixelated;
         max-width: 350px;
         box-shadow: 0px 0px 10px 0px #000000;
         border: 2px solid #000000;
