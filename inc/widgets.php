@@ -131,3 +131,17 @@ if ( ! function_exists( 'skycraft_widgets_init' ) ) {
 	}
 }
 add_action( 'widgets_init', 'skycraft_widgets_init' );
+
+/* Admin Widgets */
+if ( ! function_exists( 'skycraft_dashboard_widgets' ) ) {
+	function skycraft_dashboard_widgets() {
+		wp_add_dashboard_widget('skycraft_dashboard_widget_help', 'Theme Support', 'skycraft_dashboard_widget_help');
+	}
+}
+add_action('wp_dashboard_setup', 'skycraft_dashboard_widgets');
+ 
+if ( ! function_exists( 'skycraft_dashboard_widget_help' ) ) {
+	function skycraft_dashboard_widget_help() {
+		echo '<p>Thanks for using <b>SkyCraft</b>! Need help? Contact the developer <a href="mailto:privat@skyraptor.eu">here</a>. For WordPress Tutorials visit: <a href="https://www.wpbeginner.com" target="_blank">WPBeginner</a></p>';
+	}
+}
