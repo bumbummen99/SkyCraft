@@ -23,17 +23,11 @@ if ( post_password_required() ) {
 ?>
 
 <div class="comments-area-wrapper mb-2">
-
 	<div class="comments-area" id="comments">
-
 		<div class="comments-area-inner">
-
 			<?php // You can start editing here -- including this comment! ?>
-
 			<?php if ( have_comments() ) : ?>
-
 				<h2 class="comments-title">
-
 					<?php
 					$comments_number = get_comments_number();
 					if ( 1 === (int) $comments_number ) {
@@ -57,82 +51,58 @@ if ( post_password_required() ) {
 						);
 					}
 					?>
-
 				</h2><!-- .comments-title -->
-
 				<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
-
 					<nav class="comment-navigation" id="comment-nav-above">
-
 						<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'skycraft' ); ?></h1>
-
 						<?php if ( get_previous_comments_link() ) { ?>
 							<div class="nav-previous">
 								<?php previous_comments_link( __( '&larr; Older Comments', 'skycraft' ) ); ?>
 							</div>
 						<?php } ?>
-
 						<?php	if ( get_next_comments_link() ) { ?>
 							<div class="nav-next">
 								<?php next_comments_link( __( 'Newer Comments &rarr;', 'skycraft' ) ); ?>
 							</div>
 						<?php } ?>
-
 					</nav><!-- #comment-nav-above -->
-
 				<?php endif; // check for comment navigation. ?>
-
 				<ol class="comment-list">
-
 					<?php
-					wp_list_comments(
-						array(
-							'style'      => 'ol',
-							'short_ping' => true,
+						wp_list_comments([
+							'walker'      => new SkyCraft_Comment_Walker(),
+							'style'       => 'ol',
+							'short_ping'  => true,
 							'avatar_size' => 50,
-						)
-					);
+						]);
 					?>
-
 				</ol><!-- .comment-list -->
-
 				<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
-
 					<nav class="comment-navigation" id="comment-nav-below">
-
 						<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'skycraft' ); ?></h1>
-
 						<?php if ( get_previous_comments_link() ) { ?>
 							<div class="nav-previous">
 								<?php previous_comments_link( __( '&larr; Older Comments', 'skycraft' ) ); ?>
 							</div>
 						<?php } ?>
-
 						<?php	if ( get_next_comments_link() ) { ?>
 							<div class="nav-next">
 								<?php next_comments_link( __( 'Newer Comments &rarr;', 'skycraft' ) ); ?>
 							</div>
 						<?php } ?>
-
 					</nav><!-- #comment-nav-below -->
-
 				<?php endif; // check for comment navigation. ?>
-
 			<?php endif; // endif have_comments(). ?>
 
 			<?php
 			// If comments are closed and there are comments, let's leave a little note, shall we?
 			if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-				?>
-
+			?>
 				<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'skycraft' ); ?></p>
-
 			<?php endif; ?>
 
 			<?php comment_form(); // Render comments form. ?>
-
 		</div>
-
 	</div><!-- #comments -->
 	<div class="block-bottom wood">
 		<span class="left"></span>

@@ -76,9 +76,34 @@ if ( ! function_exists( 'skycraft_bootstrap_comment_form' ) ) {
  *
  * @return mixed
  */
-function custom_comment_reply_link($content) {
-    $extra_classes = 'btn btn-success';
-    return preg_replace( '/comment-reply-link/', 'comment-reply-link ' . $extra_classes, $content);
+if ( ! function_exists( 'custom_comment_reply_link' ) ) {
+	function custom_comment_reply_link($content) {
+		$extra_classes = 'btn btn-success';
+		return preg_replace( '/comment-reply-link/', 'comment-reply-link ' . $extra_classes, $content);
+	}
 }
-
 add_filter('comment_reply_link', 'custom_comment_reply_link', 99);
+
+/**
+ * Custom comment walker
+ *
+ * @users Walker_Comment
+ */
+class SkyCraft_Comment_Walker extends Walker_Comment
+{
+    public function start_el( &$output, $comment, $depth = 0, $args = array(), $id = 0 )
+    {
+		$depth++;
+		$GLOBALS['comment_depth'] = $depth;
+		$GLOBALS['comment'] = $comment;
+
+		// Start output buffering
+		ob_start();
+
+		// Let's use the native html5 comment template
+		$this->html5_comment( $comment, $depth, $args );
+
+		// Our modifications (wrap <time> with <span>)
+		$output .= str_replace( 'class="comment ', 'class="comment mb-3 ', ob_get_clean() );   
+    }
+} // end class
