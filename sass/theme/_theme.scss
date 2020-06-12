@@ -123,6 +123,12 @@ section.not-found {
         .page-header,
         .page-content {
             padding: #{$grid-gutter-width / 2};
+
+            &:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
         }
 
         .entry-title,

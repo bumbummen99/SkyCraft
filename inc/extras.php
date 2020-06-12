@@ -106,18 +106,31 @@ if ( ! function_exists ( 'skycraft_post_nav' ) ) {
 		<nav class="container navigation post-navigation">
 			<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'skycraft' ); ?></h2>
 			<div class="row nav-links justify-content-between mb-3">
-				<?php
-				echo '<span class="nav-previous">';
-				if ( get_previous_post_link() ) {
-					previous_post_link( '%link', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'skycraft' ) );
+			<?php
+				$next = get_next_post()->ID;
+				$prev = get_previous_post()->ID;
+
+				if( $prev ) {
+					$title = get_the_title( $prev );
+					$link = get_the_permalink( $prev );
+					$post_name = str_limit($title, 20);
+					?>
+						<span class="nav-previous">
+							<a class="btn btn-secondary" href="<?php echo $link; ?>" rel="prev" title="<?php echo $title; ?>">&larr; <?php echo $post_name; ?></a>
+						</span>
+					<?php
 				}
-				echo '</span>';
-				echo '<span class="nav-next">';
-				if ( get_next_post_link() ) {
-					next_post_link( '%link', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'skycraft' ) );
+				if( $next ) {
+					$title = get_the_title( $next );
+					$link = get_the_permalink( $next );
+					$post_name = str_limit($title, 20);
+					?>
+						<span class="nav-next">
+							<a class="btn btn-secondary" href="<?php echo $link; ?>" rel="next" title="<?php echo $title; ?>"><?php echo $post_name; ?> &rarr;</a>
+						</span>
+					<?php
 				}
-				echo '</span>';
-				?>
+			?>
 			</div><!-- .nav-links -->
 		</nav><!-- .navigation -->
 		<?php
@@ -249,5 +262,16 @@ if ( ! function_exists( 'skycraft_serversign' ) ) {
 				'result' => $data,
 			], '', 15 * 60 );
 		}
+	}
+}
+
+if ( ! function_exists( 'str_limit' ) ) {
+	function str_limit($value, $limit = 100, $end = '...')
+	{
+		if (strlen($value) <= $limit) {
+			return $value;
+		}
+
+		return rtrim(substr($value, 0, $limit)) . $end;
 	}
 }

@@ -118,3 +118,8 @@ a.skip-link {
 }
 
 .navbar h1 { font-weight: $font-weight-normal; }
+
+// Fix chrome focus outline
+:focus {
+  outline: none;
+}
