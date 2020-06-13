@@ -129,6 +129,10 @@ section.not-found {
                 display: table;
                 clear: both;
             }
+
+            hr {
+                border-top: 5px solid rgba(#000000, 50%);
+            }
         }
 
         .entry-title,

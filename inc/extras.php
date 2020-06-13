@@ -111,7 +111,7 @@ if ( ! function_exists ( 'skycraft_post_nav' ) ) {
 				$prev = get_previous_post()->ID;
 
 				if( $prev ) {
-					$title = get_the_title( $prev );
+					$title = wp_strip_all_tags(get_the_title( $prev ));
 					$link = get_the_permalink( $prev );
 					$post_name = str_limit($title, 20);
 					?>
@@ -121,7 +121,7 @@ if ( ! function_exists ( 'skycraft_post_nav' ) ) {
 					<?php
 				}
 				if( $next ) {
-					$title = get_the_title( $next );
+					$title = wp_strip_all_tags(get_the_title( $next ));
 					$link = get_the_permalink( $next );
 					$post_name = str_limit($title, 20);
 					?>
