@@ -3,6 +3,7 @@
 bower_components
 
 node_modules
+package-lock.json
 
 skycraft.zip
 
@@ -13,6 +14,7 @@ dist-product
 npm-debug.log
 
 /vendor/
+composer.lock
 
 .DS_Store
 
