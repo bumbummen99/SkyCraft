@@ -1,0 +1,24 @@
+name: Publish
+on:
+  release:
+    types: [published]
+    
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: php-actions/composer@v5
+    - uses: bahmutov/npm-install@v1
+        
+    - name: Bundle
+      shell: bash
+      run: ./bundle.sh
+
+    - name: Publish
+      uses: softprops/action-gh-release@v1
+      with:
+        files: "dist/skycraft.zip"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
