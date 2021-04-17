@@ -15,7 +15,7 @@
     "minimum-stability": "stable",
     "require": {
         "composer/installers": "^1.5",
-        "xpaw/php-minecraft-query": "^2.0"
+        "xpaw/php-minecraft-query": "^4.0"
     },
     "autoload": {
         "psr-4": {
