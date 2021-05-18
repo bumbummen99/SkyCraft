@@ -8,6 +8,9 @@
     </p>
 </div>
 
+# Demo
+Check out a demo of the Theme [here](https://skycraft.skyraptor.eu/).
+
 ## Installation
 Simply download the latest release skycraft.zip from the Releases page or click [here](https://github.com/bumbummen99/SkyCraft/releases/latest). Upload the theme file to your WordPress installtion. DO NOT UNZIP THE FILE.
 
