@@ -178,6 +178,18 @@ if ( ! function_exists( 'skycraft_query_server' ) ) {
 			try
 			{
 				$query = new MinecraftPing( get_theme_mod('skycraft_serversign_address'), get_theme_mod('skycraft_serversign_port'), 2 );
+				$data = $query->Query();
+
+				set_transient( $cacheKey, [
+					'status' => $status,
+					'result' => $data,
+				], '', 15 * 60 );
+
+				if( $query )
+				{
+					$query->Close();
+					}
+				}
 			}
 			catch( MinecraftPingException $e )
 			{
@@ -185,20 +197,11 @@ if ( ! function_exists( 'skycraft_query_server' ) ) {
 			}
 			finally
 			{
-				if ($status) {
-					$data = $query->Query();
-
-					set_transient( $cacheKey, [
-						'status' => $status,
-						'result' => $data,
-					], '', 15 * 60 );
-
-					if( $query )
-					{
-						$query->Close();
-						}
-					}
+				if( $query )
+				{
+					$query->Close();
 				}
+			}
 		}
 	}
 }
@@ -245,10 +248,15 @@ if ( ! function_exists( 'skycraft_serversign' ) ) {
 				echo '<p class="mb-1">';
 				//if (get_theme_mod('skycraft_serversign_favicon_enabled')) echo '<img src="' . $data['favicon'] . '" />&nbsp;';
 				if (get_theme_mod('skycraft_serversign_description_enabled')) {
-					if (isset($data['description']['extra']) && count($data['description']['extra'])) foreach ($data['description']['extra'] as $element) {
-						echo '<font color="' . $element['color'] . '">' . $element['text'] . '</font>';
+					if (is_array($data['description'])) {
+						if (isset($data['description']['extra']) && count($data['description']['extra'])) foreach ($data['description']['extra'] as $element) {
+							echo '<font color="' . $element['color'] . '">' . $element['text'] . '</font>';
+						}
+						echo $data['description']['text'];
+					} else if (is_string($data['description'])) {
+						echo $data['description'];
 					}
-					echo $data['description']['text'];
+					
 				}
 				echo '</p>' . PHP_EOL;
 				if (get_theme_mod('skycraft_serversign_players_enabled')) echo '<p class="mb-0">' . __('Spieler', 'skycraft') . ': ' . $data['players']['online'] . '/' . $data['players']['max'] . '</span>' . PHP_EOL;
