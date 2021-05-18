@@ -185,11 +185,7 @@ if ( ! function_exists( 'skycraft_query_server' ) ) {
 					'result' => $data,
 				], '', 15 * 60 );
 
-				if( $query )
-				{
-					$query->Close();
-					}
-				}
+				$query->Close();
 			}
 			catch( MinecraftPingException $e )
 			{
