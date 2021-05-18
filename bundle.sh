@@ -10,4 +10,22 @@ rm -rf ./dist
 gulp dist
 
 # Bundle
-cd dist && zip -r skycraft.zip ./ -x ./node_modules ./node_modules/**\* ./src ./src/**\* ./.browserslistrc ./.editorconfig ./.gitignore ./.travis.yml ./bundle.sh ./codesniffer.ruleset.xml ./composer.json ./composer.lock ./gulpconfig.json ./gulpfile.js ./package-lock.json ./package.json
+mv dist/ skycraft/
+rm -R ./skycraft/node_modules
+rm -R ./skycraft/src
+rm ./skycraft/.browserslistrc
+rm ./skycraft/.editorconfig
+rm ./skycraft/.gitignore
+rm ./skycraft/.travis.yml
+rm ./skycraft/bundle.sh
+rm ./skycraft/codesniffer.ruleset.xml
+rm ./skycraft/composer.json
+rm ./skycraft/composer.lock
+rm ./skycraft/gulpconfig.json
+rm ./skycraft/gulpfile.js
+rm ./skycraft/package-lock.json
+rm ./skycraft/package.json
+zip -r skycraft.zip ./skycraft
+
+# Cleanup
+rm -R skycraft/
