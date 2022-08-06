@@ -300,95 +300,136 @@ msgstr "左侧边栏"
 msgid "Left sidebar widget area"
 msgstr "左侧边栏小工具区域"
 
-#~ msgid "Search Results for: %s"
-#~ msgstr "搜索结果: %s"
+#: search.php:29
+#, php-format
+msgid "Search Results for: %s"
+msgstr "搜索结果: %s"
 
-#~ msgid "Skip to content"
-#~ msgstr "跳过内容"
+#: header.php:34
+msgid "Skip to content"
+msgstr "跳过内容"
 
-#~ msgid "Oops! That page can&rsquo;t be found."
-#~ msgstr "啊这！页面无法被找到。"
+#: 404.php:24
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "噗呲！页面无法被找到。"
 
-#~ msgid ""
-#~ "It looks like nothing was found at this location. Maybe try one of the "
-#~ "links below or a search?"
-#~ msgstr "在这个地方什么都没找到。要尝试下面的链接或搜索吗？"
+#: 404.php:31
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"在这个地方什么都没找到。要尝试下面的链接或搜索吗？"
 
-#~ msgid "Most Used Categories"
-#~ msgstr "最常用的分类"
+#: 404.php:42
+msgid "Most Used Categories"
+msgstr "最常用的分类"
 
-#~ msgid "Try looking in the monthly archives. %1$s"
-#~ msgstr "查看每月的归档。%1$s"
+#. translators: %1$s: smiley
+#: 404.php:62
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "查看每月的归档。%1$s"
 
-#~ msgid "About:"
-#~ msgstr "About:"
+#: author.php:34
+msgid "About:"
+msgstr "About:"
 
-#~ msgid "Profile"
-#~ msgstr "简介"
+#: author.php:49
+msgid "Profile"
+msgstr "简介"
 
-#~ msgid "in"
-#~ msgstr "在"
+#: author.php:54
+msgid "Posts by"
+msgstr "作者"
 
-#~ msgctxt "comments title"
-#~ msgid "One thought on &ldquo;%2$s&rdquo;"
-#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-#~ msgstr[0] "&ldquo;%2$s&rdquo; へ%1$s件のコメント"
+#: author.php:68
+msgid "in"
+msgstr "在"
 
-#~ msgid "Comment navigation"
-#~ msgstr "评论导航"
+#: comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "&ldquo;%2$s&rdquo; へ%1$s条评论"
 
-#~ msgid "&larr; Older Comments"
-#~ msgstr "&larr; 较旧的评论"
+#: comments.php:36 comments.php:59
+msgid "Comment navigation"
+msgstr "评论导航"
 
-#~ msgid "Newer Comments &rarr;"
-#~ msgstr "较新的评论 &rarr;"
+#: comments.php:38 comments.php:61
+msgid "&larr; Older Comments"
+msgstr "&larr; 较旧的评论"
 
-#~ msgid "Comments are closed."
-#~ msgstr "评论已被关闭。"
+#: comments.php:42 comments.php:65
+msgid "Newer Comments &rarr;"
+msgstr "较新的评论 &rarr;"
 
-#~ msgid "Search"
-#~ msgstr "搜索"
+#: comments.php:78
+msgid "Comments are closed."
+msgstr "评论已被关闭。"
 
-#~ msgid "Search &hellip;"
-#~ msgstr "搜索 &hellip;"
+#: searchform.php:10 searchform.php:16
+msgid "Search"
+msgstr "搜索"
 
-#~ msgid "Pages:"
-#~ msgstr "页数:"
+#: searchform.php:13
+msgid "Search &hellip;"
+msgstr "搜索 &hellip;"
 
-#~ msgid "Edit"
-#~ msgstr "编辑"
+#: loop-templates/content-card.php:43 loop-templates/content-page.php:25
+#: loop-templates/content.php:37 loop-templates/content-single.php:31
+#: loop-templates/content-verticalpage.php:28
+msgid "Pages:"
+msgstr "页数:"
 
-#~ msgid "Nothing Found"
-#~ msgstr "什么也没找到"
+#: loop-templates/content-page.php:34
+#: loop-templates/content-verticalpage.php:37
+msgid "Edit"
+msgstr "编辑"
 
-#~ msgid ""
-#~ "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-#~ msgstr "准备好发布你的第一篇文章了吗？<a href=\"%1$s\">从这里开始\"\"</a>。"
+#: loop-templates/content-none.php:15
+msgid "Nothing Found"
+msgstr "什么也没找到"
 
-#~ msgid ""
-#~ "Sorry, but nothing matched your search terms. Please try again with some "
-#~ "different keywords."
-#~ msgstr "抱歉，没有与您的搜索词匹配的内容。请使用其他关键字重试。"
+#: loop-templates/content-none.php:23
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "准备好发布你的第一篇文章了吗？<a href=\"%1$s\">从这里开始\"\"</a>。"
 
-#~ msgid ""
-#~ "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-#~ "searching can help."
-#~ msgstr "找不到您要找的内容。请尝试搜索。"
+#: loop-templates/content-none.php:28
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "抱歉，没有与您的搜索词匹配的内容。请使用其他关键字重试。"
 
-#~ msgid "Blank Page Template"
-#~ msgstr "空页模板"
+#: loop-templates/content-none.php:34
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "找不到您要找的内容。请尝试搜索。"
 
-#~ msgid "Left and Right Sidebar Layout"
-#~ msgstr "左右侧边栏布局"
+#. Name of the template
+msgid "Blank Page Template"
+msgstr "空页模板"
 
-#~ msgid "Empty Page Template"
-#~ msgstr "空页模板"
+#. Name of the template
+msgid "Left and Right Sidebar Layout"
+msgstr "左右侧边栏布局"
 
-#~ msgid "Full Width Page"
-#~ msgstr "全幅页面"
+#. Name of the template
+msgid "Empty Page Template"
+msgstr "空页模板"
 
-#~ msgid "Left Sidebar Layout"
-#~ msgstr "左侧栏布局"
+#. Name of the template
+msgid "Full Width Page"
+msgstr "全幅页面"
 
-#~ msgid "Vertical One Page"
-#~ msgstr "纵向一页"
+#. Name of the template
+msgid "Left Sidebar Layout"
+msgstr "左侧栏布局"
+
+#. Name of the template
+msgid "Vertical One Page"
+msgstr "纵向一页"
