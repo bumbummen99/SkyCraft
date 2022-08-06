@@ -1,0 +1,434 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: skycraft\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
+"POT-Creation-Date: 2022-08-06 19:02+0800\n"
+"PO-Revision-Date: 2022-08-06 22:52+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.6.6\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: footer.php\n"
+"X-Poedit-SearchPath-1: header.php\n"
+"X-Poedit-SearchPath-2: index.php\n"
+"X-Poedit-SearchPath-3: statichero.php\n"
+"X-Poedit-SearchPath-4: 404.php\n"
+"X-Poedit-SearchPath-5: archive.php\n"
+"X-Poedit-SearchPath-6: search.php\n"
+"X-Poedit-SearchPath-7: sticky.php\n"
+"X-Poedit-SearchPath-8: single.php\n"
+"X-Poedit-SearchPath-9: sidebar.php\n"
+"X-Poedit-SearchPath-10: comment-form.php\n"
+"X-Poedit-SearchPath-11: comments.php\n"
+"X-Poedit-SearchPath-12: content-none.php\n"
+"X-Poedit-SearchPath-13: content-page.php\n"
+"X-Poedit-SearchPath-14: content-search.php\n"
+"X-Poedit-SearchPath-15: content-single.php\n"
+"X-Poedit-SearchPath-16: content.php\n"
+"X-Poedit-SearchPath-17: hero.php\n"
+"X-Poedit-SearchPath-18: page.php\n"
+"X-Poedit-SearchPath-19: functions.php\n"
+"X-Poedit-SearchPath-20: page-templates\n"
+"X-Poedit-SearchPath-21: inc\n"
+
+#: inc/class-wp-bootstrap-navwalker.php:357
+msgid "Add a menu"
+msgstr "添加菜单"
+
+#: inc/custom-comments.php:32
+msgid "Name"
+msgstr "名称"
+
+#: inc/custom-comments.php:35
+msgid "Email"
+msgstr "电子邮箱"
+
+#: inc/custom-comments.php:38
+msgid "Website"
+msgstr "网站"
+
+#: inc/custom-comments.php:42
+msgid ""
+"Save my name, email, and website in this browser for the next time I comment"
+msgstr "将我的名称、电子邮件和网站保存在此浏览器中，以便下次我发表评论"
+
+#: inc/custom-comments.php:63
+msgctxt "noun"
+msgid "Comment"
+msgstr "评论"
+
+#: inc/custom-header.php:49
+msgid "Default Header Image"
+msgstr "默认页眉图片"
+
+#: inc/customizer.php:43
+msgid "Theme Layout Settings"
+msgstr "主题布局设置"
+
+#: inc/customizer.php:45 inc/customizer.php:56
+msgid "Container width and sidebar defaults"
+msgstr "容器宽度和侧栏默认值"
+
+#: inc/customizer.php:54
+msgid "ServerSign Settings"
+msgstr "服务器状态显示设置"
+
+#: inc/customizer.php:95
+msgid "Enable Server Sign"
+msgstr "启用服务器状态显示"
+
+#: inc/customizer.php:96
+msgid "Enables the Server Sign functionality in the Header."
+msgstr "启用页眉中的服务器状态显示功能。"
+
+#: inc/customizer.php:108
+msgid "ServerSign Description"
+msgstr "服务器描述"
+
+#: inc/customizer.php:109
+msgid "Enables the server description in the Server Sign."
+msgstr "启用服务器描述显示功能"
+
+#: inc/customizer.php:134
+msgid "ServerSign Players"
+msgstr "服务器玩家人数"
+
+#: inc/customizer.php:135
+msgid "Enables the server players in the Server Sign."
+msgstr "启动服务器玩家人数显示功能"
+
+#: inc/customizer.php:147
+msgid "ServerSign Version"
+msgstr "服务器版本"
+
+#: inc/customizer.php:148
+msgid "Enables the server version in the Server Sign."
+msgstr "启用服务器版本显示功能"
+
+#: inc/customizer.php:161
+msgid "ServerSign Address"
+msgstr "服务器地址"
+
+#: inc/customizer.php:162
+msgid "Defines the server address for the Server Sign."
+msgstr "请在此输入您所要显示状态的Minecraft服务器地址"
+
+#: inc/customizer.php:175
+msgid "ServerSign Port"
+msgstr "服务器端口"
+
+#: inc/customizer.php:176
+msgid "Defines the server port for the Server Sign."
+msgstr "请在此输入您所要显示状态的Minecraft服务器端口"
+
+#: inc/customizer.php:194
+msgid "Container Width"
+msgstr "容器宽度"
+
+#: inc/customizer.php:195
+msgid "Choose between Bootstrap's container and container-fluid"
+msgstr "请选择Bootstrap的固定宽度容器和全宽度容器"
+
+#: inc/customizer.php:200
+msgid "Fixed width container"
+msgstr "固定宽度容器"
+
+#: inc/customizer.php:201
+msgid "Full width container"
+msgstr "全宽容器"
+
+#: inc/customizer.php:223
+msgid "Sidebar Positioning"
+msgstr "边栏定位"
+
+#: inc/customizer.php:225
+msgid ""
+"Set sidebar's default position. Can either be: right, left, both or none. "
+"Note: this can be overridden on individual pages."
+msgstr ""
+"侧边栏的位置。您可以选择以下选项之一：右侧边栏，左侧边栏，左右侧边栏和无侧边"
+"栏。注意：这可能会覆盖单个页面！"
+
+#: inc/customizer.php:233
+msgid "Right sidebar"
+msgstr "右侧边栏"
+
+#: inc/customizer.php:234
+msgid "Left sidebar"
+msgstr "左侧边栏"
+
+#: inc/customizer.php:235
+msgid "Left & Right sidebars"
+msgstr "左右侧边栏"
+
+#: inc/customizer.php:236
+msgid "No sidebar"
+msgstr "无侧边栏"
+
+#: inc/extras.php:107
+msgid "Post navigation"
+msgstr "文章导航"
+
+#: inc/extras.php:210
+msgid "Server Query (60 Seconds)"
+msgstr "服务器查询（60秒）"
+
+#: inc/extras.php:258
+msgid "Spieler"
+msgstr "玩家"
+
+#: inc/extras.php:259
+msgid "Version"
+msgstr "版本"
+
+#: inc/hooks.php:32
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#. translators:
+#: inc/hooks.php:35
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Proudly powered by %s"
+
+#. translators:
+#: inc/hooks.php:40
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "主题：%1$s是由%2$s制作的。"
+
+#: inc/hooks.php:42
+msgid "http://skyraptor.eu"
+msgstr "http://skyraptor.eu"
+
+#: inc/pagination.php:25
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: inc/pagination.php:26
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: inc/pagination.php:27
+msgid "Posts navigation"
+msgstr "文章导航"
+
+#: inc/setup.php:49
+msgid "Primary Menu"
+msgstr "主菜单"
+
+#: inc/setup.php:136
+msgid "Read More..."
+msgstr "阅读更多......"
+
+#: inc/template-tags.php:32
+msgctxt "post date"
+msgid "Posted on"
+msgstr "投稿日期"
+
+#: inc/template-tags.php:40
+msgctxt "post author"
+msgid "by"
+msgstr "作者:"
+
+#: inc/template-tags.php:40
+msgctxt "post author"
+msgid "Posted by"
+msgstr "作者:"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:58 inc/template-tags.php:64
+msgid ", "
+msgstr ","
+
+#. translators: %s: Categories of current post
+#: inc/template-tags.php:61
+#, php-format
+msgid "Posted in %s"
+msgstr "发布于: %1$s"
+
+#. translators: %s: Tags of current post
+#: inc/template-tags.php:67
+#, php-format
+msgid "Tagged %s"
+msgstr "标签 %s"
+
+#: inc/template-tags.php:72
+msgid "Leave a comment"
+msgstr "发表评论"
+
+#: inc/template-tags.php:72
+msgid "1 Comment"
+msgstr "1条评论"
+
+# Are you mistaking the formatter?
+#: inc/template-tags.php:72
+msgid "% Comments"
+msgstr "% 条评论"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:78
+#, php-format
+msgid "Edit %s"
+msgstr "编辑 %s"
+
+#: inc/widgets.php:118
+msgid "Right Sidebar"
+msgstr "右侧边栏"
+
+#: inc/widgets.php:120
+msgid "Right sidebar widget area"
+msgstr "右侧边栏小工具区域"
+
+#: inc/widgets.php:126
+msgid "Left Sidebar"
+msgstr "左侧边栏"
+
+#: inc/widgets.php:128
+msgid "Left sidebar widget area"
+msgstr "左侧边栏小工具区域"
+
+#: search.php:29
+#, php-format
+msgid "Search Results for: %s"
+msgstr "搜索结果: %s"
+
+#: header.php:34
+msgid "Skip to content"
+msgstr "跳过内容"
+
+#: 404.php:24
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "噗呲！页面无法被找到。"
+
+#: 404.php:31
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr "在这个地方什么都没找到。要尝试下面的链接或搜索吗？"
+
+#: 404.php:42
+msgid "Most Used Categories"
+msgstr "最常用的分类"
+
+#. translators: %1$s: smiley
+#: 404.php:62
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "查看每月的归档。%1$s"
+
+#: author.php:34
+msgid "About:"
+msgstr "About:"
+
+#: author.php:49
+msgid "Profile"
+msgstr "简介"
+
+#: author.php:54
+msgid "Posts by"
+msgstr "作者"
+
+#: author.php:68
+msgid "in"
+msgstr "在"
+
+#: comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "&ldquo;%2$s&rdquo; へ%1$s条评论"
+
+#: comments.php:36 comments.php:59
+msgid "Comment navigation"
+msgstr "评论导航"
+
+#: comments.php:38 comments.php:61
+msgid "&larr; Older Comments"
+msgstr "&larr; 较旧的评论"
+
+#: comments.php:42 comments.php:65
+msgid "Newer Comments &rarr;"
+msgstr "较新的评论 &rarr;"
+
+#: comments.php:78
+msgid "Comments are closed."
+msgstr "评论已被关闭。"
+
+#: searchform.php:10 searchform.php:16
+msgid "Search"
+msgstr "搜索"
+
+#: searchform.php:13
+msgid "Search &hellip;"
+msgstr "搜索 &hellip;"
+
+#: loop-templates/content-card.php:43 loop-templates/content-page.php:25
+#: loop-templates/content.php:37 loop-templates/content-single.php:31
+#: loop-templates/content-verticalpage.php:28
+msgid "Pages:"
+msgstr "页数:"
+
+#: loop-templates/content-page.php:34
+#: loop-templates/content-verticalpage.php:37
+msgid "Edit"
+msgstr "编辑"
+
+#: loop-templates/content-none.php:15
+msgid "Nothing Found"
+msgstr "什么也没找到"
+
+#: loop-templates/content-none.php:23
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "准备好发布你的第一篇文章了吗？<a href=\"%1$s\">从这里开始\"\"</a>。"
+
+#: loop-templates/content-none.php:28
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "抱歉，没有与您的搜索词匹配的内容。请使用其他关键字重试。"
+
+#: loop-templates/content-none.php:34
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "找不到您要找的内容。请尝试搜索。"
+
+#. Name of the template
+msgid "Blank Page Template"
+msgstr "空页模板"
+
+#. Name of the template
+msgid "Left and Right Sidebar Layout"
+msgstr "左右侧边栏布局"
+
+#. Name of the template
+msgid "Empty Page Template"
+msgstr "空页模板"
+
+#. Name of the template
+msgid "Full Width Page"
+msgstr "全幅页面"
+
+#. Name of the template
+msgid "Left Sidebar Layout"
+msgstr "左侧栏布局"
+
+#. Name of the template
+msgid "Vertical One Page"
+msgstr "纵向一页"
