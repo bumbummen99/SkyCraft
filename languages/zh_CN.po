@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: skycraft\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2022-08-06 19:02+0800\n"
-"PO-Revision-Date: 2022-08-06 19:02+0800\n"
+"PO-Revision-Date: 2022-08-06 22:52+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -131,7 +131,7 @@ msgstr "服务器端口"
 
 #: inc/customizer.php:176
 msgid "Defines the server port for the Server Sign."
-msgstr "请在此输入您所要显示状态的Minecraft服务器地址"
+msgstr "请在此输入您所要显示状态的Minecraft服务器端口"
 
 #: inc/customizer.php:194
 msgid "Container Width"
@@ -317,8 +317,7 @@ msgstr "噗呲！页面无法被找到。"
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
-msgstr ""
-"在这个地方什么都没找到。要尝试下面的链接或搜索吗？"
+msgstr "在这个地方什么都没找到。要尝试下面的链接或搜索吗？"
 
 #: 404.php:42
 msgid "Most Used Categories"
